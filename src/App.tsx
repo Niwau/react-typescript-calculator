@@ -1,45 +1,40 @@
-import { createContext, useReducer, useState } from "react";
+import { useReducer } from "react";
 import { Button } from "./components/Button/Button";
 import { ButtonsContainer } from "./components/ButtonsContainer/ButtonsContainer";
 import { Screen } from "./components/Screen/Screen";
+import { Wrapper } from "./components/Wrapper/Wrapper";
 import "./styles/styles.css"
+
 
 export default function App() {
   
   return (
     <div className="App">
-      <div style={WrapperStyle}>
+      <Wrapper>
           <Screen/>
           <ButtonsContainer>
-            <Button>C</Button>
-            <Button>+/-</Button>
-            <Button>%</Button>
-            <Button>/</Button>
-            <Button>7</Button>
-            <Button>8</Button>
-            <Button>9</Button>
-            <Button>x</Button>
-            <Button>4</Button>
-            <Button>5</Button>
-            <Button>6</Button>
-            <Button>-</Button>
-            <Button>1</Button>
-            <Button>2</Button>
-            <Button>3</Button>
-            <Button>+</Button>
-            <Button>0</Button>
-            <Button>.</Button>
-            <Button>del</Button>
-            <Button>=</Button>
+            <Button operation="reset">C</Button>
+            <Button operation="+">+/-</Button>
+            <Button operation="%">%</Button>
+            <Button operation="/">/</Button>
+            <Button operation="7">7</Button>
+            <Button operation="8">8</Button>
+            <Button operation="9">9</Button>
+            <Button operation="*">x</Button>
+            <Button operation="4">4</Button>
+            <Button operation="5">5</Button>
+            <Button operation="6">6</Button>
+            <Button operation="-">-</Button>
+            <Button operation="1">1</Button>
+            <Button operation="2">2</Button>
+            <Button operation="3">3</Button>
+            <Button operation="+">+</Button>
+            <Button operation="0">0</Button>
+            <Button operation=".">.</Button>
+            <Button operation="delete">del</Button>
+            <Button operation="=">=</Button>
           </ButtonsContainer>
-      </div>
+      </Wrapper>
     </div>
   )
-}
-
-const WrapperStyle : React.CSSProperties = {
-  display: 'grid',
-  gridTemplateRows: '0.5fr 2fr',
-  width: '35rem',
-  margin: '50px auto'
 }
