@@ -13,4 +13,8 @@ export const Container = styled.button`
         box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.2);
     }
 
+    :active {
+        transform: scale(1);
+    }
+
 `

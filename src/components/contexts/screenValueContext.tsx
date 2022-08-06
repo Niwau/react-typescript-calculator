@@ -1,4 +1,8 @@
-import { createContext, Dispatch } from "react";
-import { State, Actions } from "../Wrapper/Wrapper";
+import React, { createContext } from "react";
 
-export const screenValueContext = createContext<[State, Dispatch<Actions>] | null>(null)
+export type screenValueContextType = [
+    screenValue: string,
+    setScreenValue: React.Dispatch<React.SetStateAction<string>>
+]
+
+export const screenValueContext = createContext<screenValueContextType>({} as screenValueContextType)

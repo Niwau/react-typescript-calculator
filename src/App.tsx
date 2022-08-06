@@ -1,4 +1,3 @@
-import { useReducer } from "react";
 import { Button } from "./components/Button/Button";
 import { ButtonsContainer } from "./components/ButtonsContainer/ButtonsContainer";
 import { Screen } from "./components/Screen/Screen";
@@ -17,7 +16,7 @@ export default function App() {
             <Button operation="+">+/-</Button>
             <Button operation="%">%</Button>
             <Button operation="/">/</Button>
-            <Button operation="7">7</Button>
+            <Button operation={"7"}>7</Button>
             <Button operation="8">8</Button>
             <Button operation="9">9</Button>
             <Button operation="*">x</Button>
